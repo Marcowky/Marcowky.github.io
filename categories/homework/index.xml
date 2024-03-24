@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homework on Marco&#39;s Nonsense</title>
+    <link>https://blog.marco.io/categories/homework/</link>
+    <description>Recent content in Homework on Marco&#39;s Nonsense</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Mar 2024 20:32:59 +0800</lastBuildDate>
+    <atom:link href="https://blog.marco.io/categories/homework/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>作业一 云服务器的基本使用</title>
+      <link>https://blog.marco.io/posts/homework/</link>
+      <pubDate>Sat, 23 Mar 2024 20:32:59 +0800</pubDate>
+      <guid>https://blog.marco.io/posts/homework/</guid>
+      <description>作业一 云服务器的基本使用&#xA;学号：21311162&#xA;姓名：伍开钰&#xA;Have a good day !&#xA;安装 Hugo 链接：https://gohugo.io/installation/linux/&#xA;Prerequisites Git Go 安装 # 使用 Go 安装 CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest # 配置 Go 的 bin 路径 echo &amp;#39;export PATH=$PATH:/pathto/go/bin&amp;#39; &amp;gt;&amp;gt; ~/.zshrc source ~/.zshrc # 查看 hugo 版本 hugo version Quick Start Create a site # 在 quickstart 目录中为您的项目创建目录结构。 hugo new site quickstart cd quickstart git init # 将 yinyang 主题克隆到 themes 目录中，并将其作为 Git 子模块添加到您的项目中。 git submodule add https://github.</description>
+    </item>
+  </channel>
+</rss>

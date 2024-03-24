@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Marco&#39;s Nonsense</title>
+    <link>https://blog.marco.io/categories/</link>
+    <description>Recent content in Categories on Marco&#39;s Nonsense</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Mar 2024 20:32:59 +0800</lastBuildDate>
+    <atom:link href="https://blog.marco.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homework</title>
+      <link>https://blog.marco.io/categories/homework/</link>
+      <pubDate>Sat, 23 Mar 2024 20:32:59 +0800</pubDate>
+      <guid>https://blog.marco.io/categories/homework/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>诗歌</title>
+      <link>https://blog.marco.io/categories/%E8%AF%97%E6%AD%8C/</link>
+      <pubDate>Sun, 04 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://blog.marco.io/categories/%E8%AF%97%E6%AD%8C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Develop</title>
+      <link>https://blog.marco.io/categories/develop/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>https://blog.marco.io/categories/develop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Golang</title>
+      <link>https://blog.marco.io/categories/golang/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>https://blog.marco.io/categories/golang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docs</title>
+      <link>https://blog.marco.io/categories/docs/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      <guid>https://blog.marco.io/categories/docs/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
