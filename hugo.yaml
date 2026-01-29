@@ -51,6 +51,7 @@ params:
   homeReadme:
     remote: "https://raw.githubusercontent.com/Marcowky/Marcowky/main/README.md"
     localPath: "external/Marcowky/README.md"
+  math: true # 是否启用数学公式支持（通过 MathJax 渲染）。
 
   ############# added setting #############
 
