@@ -20,9 +20,16 @@
 {{- end -}}
 {{- if gt (len .Params) 0 }}
 {{- $tagsKey := (.Language.Params.Taxonomies.tag | default "tags") | lower }}
+{{- $hideKeys := slice "propertieshide" }}
+{{- with site.Params.propertiesHide }}
+  {{- range . }}
+    {{- $hideKeys = $hideKeys | append (lower (printf "%v" .)) }}
+  {{- end }}
+{{- end }}
 {{- $keys := slice }}
 {{- range $key, $val := .Params }}
-  {{- if and $val (ne (lower $key) $tagsKey) }}
+  {{- $keyLower := lower $key }}
+  {{- if and $val (ne $keyLower $tagsKey) (not (in $hideKeys $keyLower)) }}
     {{- $keys = $keys | append $key }}
   {{- end }}
 {{- end }}

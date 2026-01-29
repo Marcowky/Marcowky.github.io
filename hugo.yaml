@@ -34,6 +34,8 @@ params:
   # ShowReadingTime: true
   author: "Kaiyu Wu"
   ShowToc: true
+  # Front matter keys to hide in the Properties block.
+  propertiesHide: ["lastmod"]
   homeReadme:
     remote: "https://raw.githubusercontent.com/Marcowky/Marcowky/main/README.md"
     localPath: "external/Marcowky/README.md"
