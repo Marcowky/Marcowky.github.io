@@ -20,7 +20,9 @@
 {{- end }}
 
 {{- if $content }}
-  {{- .Page.RenderString $content -}}
+  <div class="home-readme">
+    {{- .Page.RenderString $content -}}
+  </div>
 {{- else }}
   {{- warnf "home_readme: no content (set params.homeReadme.remote or params.homeReadme.localPath)" -}}
 {{- end }}

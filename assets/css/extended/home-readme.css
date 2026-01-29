@@ -1,0 +1,13 @@
+.home-readme p[align="center"] {
+    text-align: center;
+}
+
+.home-readme p[align="center"] a {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.home-readme p[align="center"] img {
+    display: inline-block;
+    vertical-align: middle;
+}
