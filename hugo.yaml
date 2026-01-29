@@ -5,7 +5,29 @@ languageCode: en-us
 title: Marco's Nonsense
 theme: ["PaperMod"]
 
-frontmatter:
+enableInlineShortcodes: true # 是否允许在内容文件中直接编写短代码逻辑。
+enableRobotsTXT: true # 是否自动生成 robots.txt 文件，用于搜索引擎爬虫引导。
+# 控制是否渲染“草稿”、“未来日期”或“已过期”的文章。通常在生产环境设为 false。
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true # 是否支持直接在 Markdown 中输入 Emoji 代码（如 :smile:）。
+pygmentsUseClasses: true # 代码高亮是否使用 CSS 类（配合 markup.highlight 使用）。
+mainSections: # 定义哪些内容类型被视为主体内容（用于首页显示）。
+  - posts
+
+minify:
+  disableXML: true # 是否禁用 XML 文件的压缩（如 RSS 或 Sitemap）。
+  # minifyOutput: true
+
+pagination:
+  disableAliases: false # 是否禁用分页别名。
+  pagerSize: 5 # 每页显示的文章数量（此处为 5 篇）。
+
+taxonomies: # 分类法映射
+  tag: tags
+
+frontmatter: # 前置数据映射
   date:
     - "lastmod"
     - "date"
@@ -17,62 +39,7 @@ frontmatter:
     - "date"
     - ":fileModTime"
 
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON
-
-taxonomies:
-  tag: tags
-
-params:
-  keywords:
-    - "Kaiyu Wu"
-    - "Wu Kaiyu"
-    - "伍开钰"
-    - "Marco"
-    - "Marcowky"
-  assets:
-    favicon: "favicon.svg"
-    favicon16x16: "favicon.svg"
-    favicon32x32: "favicon.svg"
-    apple_touch_icon: "favicon.svg"
-    safari_pinned_tab: "favicon.svg"
-  mainSections:
-    - posts
-  DateFormat: "January 2, 2006"
-  # ShowReadingTime: true # 是否显示预计阅读时间。
-  ShowPostNavLinks: true
-  author: "Kaiyu Wu"
-  ShowToc: true
-  # Front matter keys to hide in the Properties block.
-  propertiesHide: ["lastmod"]
-  homeReadme:
-    remote: "https://raw.githubusercontent.com/Marcowky/Marcowky/main/README.md"
-    localPath: "external/Marcowky/README.md"
-  math: true # 是否启用数学公式支持（通过 MathJax 渲染）。
-
-  ############# added setting #############
-
-  env: production # 运行环境。设为 production 时，Google Analytics 等追踪脚本才会生效。
-  description: "Marco's Nonsense - https://marcowky.github.io"
-
-  defaultTheme: auto # 默认主题模式（auto 表示跟随系统深色/浅色模式，也可设为 light 或 dark）。
-  # disableThemeToggle: true
-  # ShowShareButtons: true # 是否显示社交媒体分享按钮。
-  # disableSpecial1stPost: true
-  displayFullLangName: true
-  # ShowBreadCrumbs: true # 是否显示面包屑导航。
-  ShowCodeCopyButtons: true # 代码块是否显示“复制”按钮。
-  # ShowRssButtonInSectionTermList: true
-  # ShowAllPagesInArchive: true
-  ShowPageNums: true
-  # comments: false
-
-  #########################################
-
-menu:
+menu: # 主导航栏菜单
   main:
     - name: Posts
       url: /posts/
@@ -87,29 +54,67 @@ menu:
       url: /tags/
       weight: 40
 
+outputs: # 输出格式
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params: # 主题核心参数
+  env: production # 运行环境。设为 production 时，Google Analytics 等追踪脚本才会生效。
+  description: "Marco's Nonsense - https://marcowky.github.io" # 网站的元描述，利于 SEO。
+  keywords:
+    - "Kaiyu Wu"
+    - "Wu Kaiyu"
+    - "伍开钰"
+    - "Marco"
+    - "Marcowky"
+  author: "Kaiyu Wu" # 站点默认作者名称。
+
+  defaultTheme: auto # 默认主题模式（auto 表示跟随系统深色/浅色模式，也可设为 light 或 dark）。
+  # disableThemeToggle: true
+  # ShowShareButtons: true # 是否显示社交媒体分享按钮。
+  # disableSpecial1stPost: true
+  # displayFullLangName: true # 在语言切换器中是否显示完整语言名称。
+  # ShowBreadCrumbs: true # 是否显示面包屑导航。
+  ShowCodeCopyButtons: true # 代码块是否显示“复制”按钮。
+  # ShowRssButtonInSectionTermList: true # 在分类列表页是否显示 RSS 订阅图标。
+  # ShowAllPagesInArchive: true # 在归档页是否显示所有页面。
+  # ShowReadingTime: true # 是否显示预计阅读时间。
+  ShowPostNavLinks: true # 文章底部是否显示“上一篇/下一篇”导航。
+  ShowPageNums: true # 是否在列表底部显示页码。
+  ShowToc: true # 是否在文章详情页默认显示目录。
+  # Front matter keys to hide in the Properties block.
+  # comments: false
+  math: true # 是否启用数学公式支持（通过 MathJax 渲染）。
+  propertiesHide: ["lastmod"]
+
+  homeReadme:
+    remote: "https://raw.githubusercontent.com/Marcowky/Marcowky/main/README.md"
+    localPath: "external/Marcowky/README.md"
+
+  # editPost:
+  #   URL: "https://github.com/Marcowky/Marcowky.github.io/tree/master/content"
+  #   Text: "Suggest Changes" # edit text
+  #   appendFilePath: true # to append file path to Edit link
+
+  assets:
+    favicon: "favicon.svg"
+    favicon16x16: "favicon.svg"
+    favicon32x32: "favicon.svg"
+    apple_touch_icon: "favicon.svg"
+    safari_pinned_tab: "favicon.svg"
+    disableHLJS: true # 是否禁用内置的 Highlight.js。这里设为 true 是因为后面使用了 Hugo 自带的 Goldmark 渲染高亮。
+
 markup:
   goldmark:
     renderer:
-      unsafe: true
+      unsafe: true # 是否允许在 Markdown 中直接解析原生 HTML 标签。
+  highlight:
+    noClasses: false # 意味着使用外置 CSS 文件来控制代码高亮颜色。
 
-############# added setting #############
-
-enableInlineShortcodes: true # 是否允许在内容文件中直接编写短代码逻辑。
-enableRobotsTXT: true # 是否自动生成 robots.txt 文件，用于搜索引擎爬虫引导。
-# 控制是否渲染“草稿”、“未来日期”或“已过期”的文章。通常在生产环境设为 false。
-buildDrafts: false
-buildFuture: false
-buildExpired: false
-enableEmoji: true # 是否支持直接在 Markdown 中输入 Emoji 代码（如 :smile:）。
-pygmentsUseClasses: true # 代码高亮是否使用 CSS 类（配合 markup.highlight 使用）。
-# mainsections: ["posts", "papermod"] # 定义哪些内容类型被视为主体内容（用于首页显示）。
-
-minify:
-  disableXML: true # 是否禁用 XML 文件的压缩（如 RSS 或 Sitemap）。
-  # minifyOutput: true
-
-pagination:
-  disableAliases: false
-  pagerSize: 5 # 每页显示的文章数量（此处为 5 篇）。
-
-#########################################
+services:
+  instagram:
+    disableInlineCSS: true
+  x:
+    disableInlineCSS: true
