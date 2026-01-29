@@ -32,6 +32,7 @@ params:
     - posts
   DateFormat: "January 2, 2006"
   # ShowReadingTime: true
+  ShowPostNavLinks: true
   author: "Kaiyu Wu"
   ShowToc: true
   # Front matter keys to hide in the Properties block.
