@@ -18,3 +18,26 @@
 {{- with ($scratch.Get "meta") -}}
 {{- delimit . " | " | safeHTML -}}
 {{- end -}}
+{{- if gt (len .Params) 0 }}
+{{- $tagsKey := (.Language.Params.Taxonomies.tag | default "tags") | lower }}
+{{- $keys := slice }}
+{{- range $key, $val := .Params }}
+  {{- if and $val (ne (lower $key) $tagsKey) }}
+    {{- $keys = $keys | append $key }}
+  {{- end }}
+{{- end }}
+{{- if gt (len $keys) 0 }}
+{{- $lines := slice }}
+{{- range $key := sort $keys }}
+  {{- $lines = $lines | append (printf "%s: %v" $key (index $.Params $key)) }}
+{{- end }}
+{{- $bulletLines := slice }}
+{{- range $line := $lines }}
+  {{- $bulletLines = $bulletLines | append (printf "- %s" $line) }}
+{{- end }}
+<details class="post-content">
+  <summary class="post-meta">Properties</summary>
+  {{- delimit $bulletLines "\n" | markdownify }}
+</details>
+{{- end }}
+{{- end }}
