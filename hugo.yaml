@@ -16,6 +16,12 @@ taxonomies:
   tag: tags
 
 params:
+  keywords:
+    - "Kaiyu Wu"
+    - "Wu Kaiyu"
+    - "伍开钰"
+    - "Marco"
+    - "Marcowky"
   assets:
     favicon: "favicon.svg"
     favicon16x16: "favicon.svg"
