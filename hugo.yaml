@@ -1,3 +1,5 @@
+# hugo server --ignoreCache
+
 baseURL: https://marcowky.github.io/
 languageCode: en-us
 title: Marco's Nonsense
@@ -14,6 +16,12 @@ taxonomies:
   tag: tags
 
 params:
+  assets:
+    favicon: "favicon.svg"
+    favicon16x16: "favicon.svg"
+    favicon32x32: "favicon.svg"
+    apple_touch_icon: "favicon.svg"
+    safari_pinned_tab: "favicon.svg"
   mainSections:
     - posts
   DateFormat: "January 2, 2006"
