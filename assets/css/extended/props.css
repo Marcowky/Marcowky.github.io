@@ -1,3 +1,7 @@
-.entry-footer details.post-content {
+details.post-content {
   display: none;
+}
+
+.post-single details.post-content {
+  display: block;
 }
