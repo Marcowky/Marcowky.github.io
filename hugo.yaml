@@ -6,6 +6,18 @@ title: Marco's Nonsense
 theme: ["PaperMod"]
 pagination.pagerSize: 5
 
+frontmatter:
+  date:
+    - "lastmod"
+    - "date"
+    - "publishDate"
+    - ":fileModTime"
+  publishDate:
+    - "publishDate"
+    - "lastmod"
+    - "date"
+    - ":fileModTime"
+
 outputs:
   home:
     - HTML
