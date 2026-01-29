@@ -2,7 +2,7 @@ baseURL: https://marcowky.github.io/
 languageCode: en-us
 title: Marco's Nonsense
 theme: ["PaperMod"]
-pagination.pagerSize: 10
+pagination.pagerSize: 5
 
 outputs:
   home:
@@ -16,6 +16,10 @@ taxonomies:
 params:
   mainSections:
     - posts
+  DateFormat: "January 2, 2006"
+  ShowReadingTime: true
+  author: "Kaiyu Wu"
+  ShowToc: true
   homeReadme:
     remote: "https://raw.githubusercontent.com/Marcowky/Marcowky/main/README.md"
     localPath: "external/Marcowky/README.md"
