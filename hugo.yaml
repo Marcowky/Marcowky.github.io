@@ -88,6 +88,8 @@ params: # 主题核心参数
   # comments: false
   math: true # 是否启用数学公式支持（通过 MathJax 渲染）。
   propertiesHide: ["lastmod"]
+  hiddenTags:
+    - "sync_blog"
 
   homeReadme:
     remote: "https://raw.githubusercontent.com/Marcowky/Marcowky/main/README.md"
